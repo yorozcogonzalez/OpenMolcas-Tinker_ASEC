@@ -38,7 +38,7 @@ sed -i "s/.or.domcpdftDMRG))THEN/.or.domcpdftDMRG.or.Do_ESPF))THEN/" src/rasscf/
 cd ..
 mkdir build
 cd build
-cmake ../OpenMolcas
+cmake -DDMRG=ON -DNEVPT2=ON -DLINALG=MKL -DQCMaquis_NAME="Samer Gozem" -DQCMaquis_EMAIL="sgozem@gsu.edu" ../OpenMolcas
 make
 
 cp ../get_tinker_Openmolcas sbin/get_tinker
